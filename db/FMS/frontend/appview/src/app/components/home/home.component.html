@@ -1,0 +1,21 @@
+<div class="homeWrapper">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'listing'" >Documents</a>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'single'">Single Upload</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'multi'">Multiple Uploads</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+
+  <div>
+    <app-progressbar></app-progressbar>
+  </div>
+</div>
+
+

@@ -1,0 +1,12 @@
+.single{
+  padding: 5px 5px 5px 5px;
+  border: 1px solid lightgray;
+}
+
+.singlesuccess{
+  color: darkgreen
+}
+
+.singleerror{
+  color: red
+}

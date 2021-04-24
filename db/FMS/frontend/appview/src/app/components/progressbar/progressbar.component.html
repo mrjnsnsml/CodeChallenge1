@@ -1,0 +1,16 @@
+<div class="popup">
+  <!-- <p> Files {{ upserv.currentFiles }}: </p> -->
+
+  <div *ngFor="let item of upserv.currentFiles">
+    <span>{{item}}</span>
+    <span>
+      <mat-progress-bar *ngIf="upserv.uploadBegin && !upserv.uploadEnd" mode="indeterminate"
+                        style='height:7px !important'
+      ></mat-progress-bar>
+    </span>
+  </div>
+  <div *ngIf="upserv.singleSuccessFlag && upserv.uploadMode=='single'" style="color: green;">Upload Complete</div>
+  <div *ngIf="upserv.singleErrFlag && upserv.uploadMode=='single'" style="color: green;">Upload Failed</div>
+  <div *ngIf="upserv.multiSuccessFlag && upserv.uploadMode=='multi'" style="color: green;">Uploads Complete</div>
+  <div *ngIf="upserv.multiErrFlag && upserv.uploadMode=='multi'" style="color: green;">Uploads Failed</div>
+</div>

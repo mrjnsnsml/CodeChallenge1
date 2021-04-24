@@ -1,0 +1,13 @@
+.homeWrapper {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  width: 900px;
+  height: 600px;
+}
+
+/* .nav .nav-tabs a:hover, */
+a:hover {
+    /* background-color: lightgray !important ; */
+    box-shadow: 0 3px 0 red !important;
+}

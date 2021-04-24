@@ -1,0 +1,16 @@
+<p>Upload upto 10 files at once</p>
+<div class="multi">
+  <div>
+    <div><input type="file" name = "dataFiles" (change)="handleMultiFilePath($event)" multiple ></div>
+    <div style="height:5px"></div>
+    <div>
+    <button type ="button" class="btn btn-primary" [disabled] = "filteredExts.length > 0"
+                           (click)="handleMulti($event)">Multi Upload</button>
+    </div>
+    <div *ngIf="filteredExts.length > 0" style="color:red"> Only .pdf, .docx, .xlsx, .xlsm files allowed</div>
+
+    <span *ngIf="upServ.multiSuccessFlag" class="multisuccess">All Uploads Successful</span>
+    <span *ngIf="upServ.multiErrFlag" class="multierror">Uploads Failed</span>
+  </div>
+</div>
+

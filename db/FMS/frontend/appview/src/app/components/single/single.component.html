@@ -1,0 +1,18 @@
+<div class="single">
+  <div>
+    <!-- <input type="file" name="single" (change)="handleFilePath($event)"><br><br> -->
+    <div>
+      <input type="file" name="dataFile" #input (change)="handleFilePath($event)">
+    </div>
+    <div style="height:5px"></div>
+    <div>
+      <button type ="button" class="btn btn-primary"  [disabled] = "filteredExt"
+              (click)="handleSingle($event, input )">Single Upload</button><br>
+    </div>
+    <div *ngIf="filteredExt" style="color:red"> Only .pdf, .docx, .xlsx, .xlsm files allowed</div>
+    <div>
+      <span *ngIf="upServ.singleSuccessFlag" class="singlesuccess">Upload Successful</span>
+      <span *ngIf="upServ.singleErrFlag" class="singleerror">Upload Failed</span>
+    </div>
+  </div>
+</div>
